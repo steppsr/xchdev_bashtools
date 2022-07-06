@@ -3,7 +3,7 @@
 # NFT Monitor
 
 # USER CONFIG SECTION ==========================================================================
-email="steppsr@gmail.com"
+email="example@gmail.com"
 wallet_id="10"
 # END USER CONFIG ==============================================================================
 
