@@ -36,7 +36,7 @@ if [ $history_exists == "false" ]; then
 fi
 
 # Calculate the current number of NFTs in the wallet specified in the USER CONFIG SECTION
-nftcount=`chia wallet nft list -i 10 | grep "NFT identifier" | wc -l`
+nftcount=`chia wallet nft list -i $wallet_id | grep "NFT identifier" | wc -l`
 
 # Gather all the URIs for the data
 nfturis=$(chia rpc wallet nft_get_nfts '{"wallet_id": '\"$wallet_id\"'}' | jq '.nft_list[].data_uris[0]' | cut --fields 2 --delimiter=\")
