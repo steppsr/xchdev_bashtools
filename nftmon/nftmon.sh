@@ -45,7 +45,7 @@ grep -Fxvf $appdir/.nfturis $appdir/.currenturis > $appdir/.newuris
 rm $appdir/.currenturis
 
 # If history file exists pull the current value
-if test -f "./.nftcount"; then
+if test -f "$appdir/.nftcount"; then
     lastnftcount=`cat $appdir/.nftcount`
 fi
 
