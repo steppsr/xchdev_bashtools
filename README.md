@@ -1,5 +1,16 @@
 # XCHDEV Bash Tools
 
+```
+Warning: there is a current bug that causes the script to store it's working files into the
+~/chia-blockchain folder. If you update from source (running the command at Bash prompt)
+then you may see warnings about uncommitted files.
+
+You can delete the following files if found in ~/chia-blockchain
+  .nftcount
+  .nfturis
+
+```
+
 # nftmon
 
 **nftmon** is a tool to identify when the quantity of a nft wallet changes and send an alert email.
