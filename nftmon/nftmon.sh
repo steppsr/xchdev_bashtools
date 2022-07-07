@@ -11,7 +11,7 @@ wallet_id="10"
 # ------------------------------------------------------------------------
 # All configuration settings should be changed ABOVE, not below this line.
 # ------------------------------------------------------------------------
-appdir=`dirname $0`
+appdir=`pwd`
 
 # Activate Chia python environment
 cd ~/chia-blockchain
@@ -65,3 +65,27 @@ echo $nfturis > $appdir/.nfturis
 # Clean up temp files
 rm $appdir/.newuris
 rm $appdir/.newurls.html
+
+
+# Version History
+#
+# v0.1.0 - Initial Release:
+#            - Basic functionality. 
+#            - Email notification for any new NFTs since the last time the script ran.
+#            - Included hyperlinked images of the new NFTs.
+#            - Instructions on installing and setting up ssmtp with a Gmail account.
+#
+# v0.1.1 - Changes:
+#            - Correction to default values.
+#
+# v0.1.2 - Changes:
+#            - Updated the wallet_id in the NFT count line to not be hardcoded and use user config value.
+#
+# v0.1.3 - Changes:
+#            - Replaced "./" path notation with "$appdir" variable.
+#
+
+# Next version
+# - Changed the appdir to be based on pwd command instead of the dirname command. dirname was causing files
+#   to be created in the ~/chia-blockchain directory.
+
