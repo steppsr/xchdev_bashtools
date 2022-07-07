@@ -84,8 +84,7 @@ rm $appdir/.newurls.html
 # v0.1.3 - Changes:
 #            - Replaced "./" path notation with "$appdir" variable.
 #
-
-# Next version
-# - Changed the appdir to be based on pwd command instead of the dirname command. dirname was causing files
-#   to be created in the ~/chia-blockchain directory.
+# v0.2.0 - Changes:
+#            - Changed the appdir to be based on pwd command instead of the dirname command. dirname was causing files
+#              to be created in the ~/chia-blockchain directory.
 
