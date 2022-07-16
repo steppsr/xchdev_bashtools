@@ -60,7 +60,7 @@ fi
 
 # Update out history files so they are ready for the next time the script runs.
 echo $nftcount > $appdir/.nftcount
-echo $nfturis > $appdir/.nfturis
+printf "$nfturis\n" > $appdir/.nfturis
 
 # Clean up temp files
 rm $appdir/.newuris
@@ -87,4 +87,7 @@ rm $appdir/.newurls.html
 # v0.2.0 - Changes:
 #            - Changed the appdir to be based on pwd command instead of the dirname command. dirname was causing files
 #              to be created in the ~/chia-blockchain directory.
-
+#
+# v0.2.1 - Changes:
+#            - Changed from 'echo' to 'printf' for writing out the uris so the file ends up with one URL per line.
+#                echo was wasn't putting each URL on a newline which caused the email to send all NFTs not just new ones.
