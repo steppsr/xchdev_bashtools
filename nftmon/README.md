@@ -26,7 +26,7 @@ sudo apt install jq
 sudo apt install tr
 ```
 
-**UPDATE**
+**ATTENTION:** The user configuration requirements have changed. If you are using the script already, you may need to change how you execute the script. This could require changes to the cron job if you set one up.
 > All user configuration has been removed and you do not need to edit the script. 
 > You **will** need to add the email address to command line when executing the script.
 
