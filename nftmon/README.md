@@ -19,14 +19,21 @@ sudo apt install curl
 
 sudo apt install ssmtp
 
+sudo apt install mailx
+
 sudo apt install jq
 
 sudo apt install tr
 ```
 
+**UPDATE**
+> All user configuration has been removed and you do not need to edit the script. 
+> You **will** need to add the email address to command line when executing the script.
+
 ---
 
 **Setting up ssmtp (using a Gmail account)**
+
 Since I have 2-factor authentication turned on for Gmail in order to get my Gmail account set up in ssmtp I had to set up an App Password. Below is a link to Google on how to do that, but I also listed the steps out. You will need to securely save that App Password. I will use  _APP_PASSWORD_  as a placeholder in the code, you need to replace that with your actual App Password.
 
 Also, email isn't required so you can skip this step if you aren't comfortable with an App Password.
@@ -79,13 +86,17 @@ You should have received an email in your Gmail inbox.
 ---
 
 **How to run the script**
+
+**UPDATE** Be sure to include the email address when executing the script. This is now the only user configuration needed. There is no need to edit the script.
+
 ```
-bash nftmon.sh
+bash nftmon.sh username@gmail.com
 ```
 
 ---
 
 **Change the permissions to make the script executable**
+
 ```
 chmod +x nftmon.sh
 ```
@@ -93,16 +104,21 @@ chmod +x nftmon.sh
 ---
 
 **Add the script into Crontab**
+
 Let's add a line into crontab so the script will run every minute. First open crontab.
+
 ```
 crontab -e
 ```
 
 Then add the following to run every minute.
+
 ```
-* * * * * YOUR_APP_FOLDER/nftmon.sh
+* * * * * YOUR_APP_FOLDER/nftmon.sh username@gmail.com
 ```
+
 Real example:
+
 ```
-* * * * * ~/xchdev_tools/nftmon/nftmon.sh
+* * * * * ~/xchdev_tools/nftmon/nftmon.sh username@gmail.com
 ```

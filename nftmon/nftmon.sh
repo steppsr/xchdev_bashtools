@@ -91,3 +91,14 @@ rm $appdir/.newurls.html
 # v0.2.1 - Changes:
 #            - Changed from 'echo' to 'printf' for writing out the uris so the file ends up with one URL per line.
 #                echo was wasn't putting each URL on a newline which caused the email to send all NFTs not just new ones.
+#
+# v0.3.0 - Changes:
+#            - Changed from using 'ssmtp' to 'mailx' command to send HTML email without using 'echo' or 'printf', which
+#                were causing issues for urls with spaces urlencoded (ex. %20)
+#            - Removed user configuration in script. No editing of the script is required after downloading. There is a
+#                new method to running the script. You will need to add the send to email after the name of the script
+#                when executing the script. Ex.   '$ bash nftmon.sh username@email.com'
+#          New features:
+#            - The script now supports multiple NFT wallets with no setup required. The script will gather all NFTs in
+#                all NFT wallets automatically.
+
