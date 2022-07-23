@@ -24,6 +24,8 @@ sudo apt install mailx
 sudo apt install jq
 
 sudo apt install tr
+
+sudo apt install xargs
 ```
 
 **ATTENTION:** The user configuration requirements have changed. If you are using the script already, you may need to change how you execute the script. This could require changes to the cron job if you set one up.
@@ -122,3 +124,4 @@ Real example:
 ```
 * * * * * ~/xchdev_tools/nftmon/nftmon.sh username@gmail.com
 ```
+
