@@ -4,6 +4,8 @@
 
 **nftmon** is a tool to identify when the quantity of a nft wallet changes and send an alert email.
 
+**Updated for Chia 1.6.1 version.**
+
 **Download**
 You can down the nftmon.sh script and save into a folder you want to use for the application.
 I created a folder for "xchdev_bashtools" in my home folder, and then have subfolder for each individual tool. For example:

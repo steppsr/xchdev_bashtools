@@ -37,12 +37,16 @@ for val in $wallet_list; do
     nftcount=$(($nftcount+$temp))
 done
 
+# TODO
+# Add in NFT names to the file with URIs
+#  curl -s https://storage1.xchstorage.cyou/namesdao/____xchdev-4042430.json | jq '.name'
+
 # Gather all the URIs for the data
 echo "" > $appdir/.currenturis
 nfturis=""
 monchia_nfts=""
 for val in $wallet_list; do
-    tempuris=$(chia rpc wallet nft_get_nfts '{"wallet_id": '\"$val\"'}' | jq '.nft_list[].data_uris[0]' | cut --fields 2 --delimiter=\")
+    tempuris=$(chia rpc wallet nft_get_nfts '{"wallet_id":'$val'}' | jq '.nft_list[].data_uris[0]' | cut --fields 2 --delimiter=\")
     if ! [ -z "$tempuris" ]; then
         nfturis="$nfturis $tempuris"
         tempuris=""
@@ -117,4 +121,7 @@ rm $appdir/.nftemail.html
 #          New features:
 #            - The script now supports multiple NFT wallets with no setup required. The script will gather all NFTs in
 #                all NFT wallets automatically.
-
+#
+# v0.3.1 - Changes:
+#            - Updated chia command structure for RPC endpoint to handle the wallet_id value for the new Chia 1.6.1 version.
+#
