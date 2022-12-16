@@ -123,5 +123,8 @@ rm $appdir/.nftemail.html
 #                all NFT wallets automatically.
 #
 # v0.3.1 - Changes:
+#            - Update for forgotten script file.
+#
+# v0.3.2 - Changes:
 #            - Updated chia command structure for RPC endpoint to handle the wallet_id value for the new Chia 1.6.1 version.
 #
